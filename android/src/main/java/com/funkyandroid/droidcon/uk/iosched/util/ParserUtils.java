@@ -39,7 +39,7 @@ public class ParserUtils {
         if (input == null) {
             return null;
         }
-        return sSanitizePattern.matcher(input.replace("+", "plus").toLowerCase()).replaceAll("");
+        return sSanitizePattern.matcher(input.replace("+", "plus").toLowerCase()).replaceAll("").replace("[", "").replace("]", "");
     }
 
     /**

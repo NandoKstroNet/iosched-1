@@ -86,7 +86,7 @@ public class SyncHelper {
 
         LOGI(TAG, "Performing sync");
 
-        if ((flags & FLAG_SYNC_LOCAL) != 0) {
+//        if ((flags & FLAG_SYNC_LOCAL) != 0) {
             final long startLocal = System.currentTimeMillis();
             final boolean localParse = localVersion < LOCAL_VERSION_CURRENT;
             LOGD(TAG, "found localVersion=" + localVersion + " and LOCAL_VERSION_CURRENT="
@@ -120,7 +120,7 @@ public class SyncHelper {
                     ++syncResult.stats.numUpdates; // TODO: better way of indicating progress?
                     ++syncResult.stats.numEntries;
                 }
-            }
+//            }
 
             LOGD(TAG, "Local sync took " + (System.currentTimeMillis() - startLocal) + "ms");
 
@@ -136,58 +136,58 @@ public class SyncHelper {
             batch = new ArrayList<ContentProviderOperation>();
         }
 
-        if ((flags & FLAG_SYNC_REMOTE) != 0 && isOnline()) {
-            ConferenceAPI conferenceAPI = new ConferenceAPI();
-            final long startRemote = System.currentTimeMillis();
-            LOGI(TAG, "Remote syncing announcements");
-            batch.addAll(new AnnouncementsFetcher(mContext).fetchAndParse());
-            LOGI(TAG, "Remote syncing speakers");
-            batch.addAll(new SpeakersHandler(mContext).fetchAndParse(conferenceAPI));
-            LOGI(TAG, "Remote syncing sessions");
-            batch.addAll(new SessionsHandler(mContext).fetchAndParse(conferenceAPI));
-            LOGD(TAG, "Remote sync took " + (System.currentTimeMillis() - startRemote) + "ms");
-            if (syncResult != null) {
-                ++syncResult.stats.numUpdates; // TODO: better way of indicating progress?
-                ++syncResult.stats.numEntries;
-            }
-
-            // Sync feedback stuff
-            LOGI(TAG, "Syncing session feedback");
-            batch.addAll(new FeedbackHandler(mContext).uploadNew(conferenceAPI));
-
-            // all other IOExceptions are thrown
-            LOGI(TAG, "Sync complete");
-        }
-
-        try {
-            // Apply all queued up remaining batch operations (only remote content at this point).
-            resolver.applyBatch(ScheduleContract.CONTENT_AUTHORITY, batch);
-
-            // Update search index
-            resolver.update(ScheduleContract.SearchIndex.CONTENT_URI, new ContentValues(),
-                    null, null);
-
-            // Delete empty blocks
-            Cursor emptyBlocksCursor = resolver.query(ScheduleContract.Blocks.CONTENT_URI,
-                    new String[]{ScheduleContract.Blocks.BLOCK_ID,ScheduleContract.Blocks.SESSIONS_COUNT},
-                    ScheduleContract.Blocks.EMPTY_SESSIONS_SELECTION, null, null);
-            batch = new ArrayList<ContentProviderOperation>();
-            int numDeletedEmptyBlocks = 0;
-            while (emptyBlocksCursor.moveToNext()) {
-                batch.add(ContentProviderOperation
-                        .newDelete(ScheduleContract.Blocks.buildBlockUri(
-                                emptyBlocksCursor.getString(0)))
-                        .build());
-                ++numDeletedEmptyBlocks;
-            }
-            emptyBlocksCursor.close();
-            resolver.applyBatch(ScheduleContract.CONTENT_AUTHORITY, batch);
-            LOGD(TAG, "Deleted " + numDeletedEmptyBlocks + " empty session blocks.");
-        } catch (RemoteException e) {
-            throw new RuntimeException("Problem applying batch operation", e);
-        } catch (OperationApplicationException e) {
-            throw new RuntimeException("Problem applying batch operation", e);
-        }
+//        if ((flags & FLAG_SYNC_REMOTE) != 0 && isOnline()) {
+//            ConferenceAPI conferenceAPI = new ConferenceAPI();
+//            final long startRemote = System.currentTimeMillis();
+//            LOGI(TAG, "Remote syncing announcements");
+//            batch.addAll(new AnnouncementsFetcher(mContext).fetchAndParse());
+//            LOGI(TAG, "Remote syncing speakers");
+//            batch.addAll(new SpeakersHandler(mContext).fetchAndParse(conferenceAPI));
+//            LOGI(TAG, "Remote syncing sessions");
+//            batch.addAll(new SessionsHandler(mContext).fetchAndParse(conferenceAPI));
+//            LOGD(TAG, "Remote sync took " + (System.currentTimeMillis() - startRemote) + "ms");
+//            if (syncResult != null) {
+//                ++syncResult.stats.numUpdates; // TODO: better way of indicating progress?
+//                ++syncResult.stats.numEntries;
+//            }
+//
+//            // Sync feedback stuff
+//            LOGI(TAG, "Syncing session feedback");
+//            batch.addAll(new FeedbackHandler(mContext).uploadNew(conferenceAPI));
+//
+//            // all other IOExceptions are thrown
+//            LOGI(TAG, "Sync complete");
+//        }
+//
+//        try {
+//            // Apply all queued up remaining batch operations (only remote content at this point).
+//            resolver.applyBatch(ScheduleContract.CONTENT_AUTHORITY, batch);
+//
+//            // Update search index
+//            resolver.update(ScheduleContract.SearchIndex.CONTENT_URI, new ContentValues(),
+//                    null, null);
+//
+//            // Delete empty blocks
+//            Cursor emptyBlocksCursor = resolver.query(ScheduleContract.Blocks.CONTENT_URI,
+//                    new String[]{ScheduleContract.Blocks.BLOCK_ID,ScheduleContract.Blocks.SESSIONS_COUNT},
+//                    ScheduleContract.Blocks.EMPTY_SESSIONS_SELECTION, null, null);
+//            batch = new ArrayList<ContentProviderOperation>();
+//            int numDeletedEmptyBlocks = 0;
+//            while (emptyBlocksCursor.moveToNext()) {
+//                batch.add(ContentProviderOperation
+//                        .newDelete(ScheduleContract.Blocks.buildBlockUri(
+//                                emptyBlocksCursor.getString(0)))
+//                        .build());
+//                ++numDeletedEmptyBlocks;
+//            }
+//            emptyBlocksCursor.close();
+//            resolver.applyBatch(ScheduleContract.CONTENT_AUTHORITY, batch);
+//            LOGD(TAG, "Deleted " + numDeletedEmptyBlocks + " empty session blocks.");
+//        } catch (RemoteException e) {
+//            throw new RuntimeException("Problem applying batch operation", e);
+//        } catch (OperationApplicationException e) {
+//            throw new RuntimeException("Problem applying batch operation", e);
+//        }
     }
 
     public void addOrRemoveSessionFromSchedule(Context context, String sessionId,

@@ -74,14 +74,15 @@ public class UIUtils {
      * Time zone to use when formatting all session times. To always use the
      * phone local time, use {@link TimeZone#getDefault()}.
      */
-    public static final TimeZone CONFERENCE_TIME_ZONE = TimeZone.getTimeZone("Europe/London");
+    public static final String CONFERENCE_TIME_ZONE_STRING = "+02:00";
+    public static final TimeZone CONFERENCE_TIME_ZONE = TimeZone.getTimeZone("GMT" + CONFERENCE_TIME_ZONE_STRING);
 
     public static final long CONFERENCE_START_MILLIS = ParserUtils.parseTime(
-            "2013-10-24T08:30:00.000+01:00");
+            "2013-10-26T09:00:00.000+03:00");
     public static final long CONFERENCE_END_MILLIS = ParserUtils.parseTime(
-            "2013-10-27T17:45:00.000+01:00");
+            "2013-10-27T18:30:00.000+02:00");
 
-    public static final String CONFERENCE_HASHTAG = "#droidconuk";
+    public static final String CONFERENCE_HASHTAG = "#devfest #ua";
 
     public static final String TARGET_FORM_FACTOR_ACTIVITY_METADATA =
             "com.funkyandroid.droidcon.uk.iosched.meta.TARGET_FORM_FACTOR";
@@ -107,7 +108,7 @@ public class UIUtils {
      * Used in {@link #tryTranslateHttpIntent(android.app.Activity)}.
      */
     private static final Uri SESSION_DETAIL_WEB_URL_PREFIX
-            = Uri.parse("http://uk.droidcon.com/2013/sessions/");
+            = Uri.parse("http://devfest.gdg.org.ua/agenda/");
 
     private static StyleSpan sBoldSpan = new StyleSpan(Typeface.BOLD);
     private static ForegroundColorSpan sColorSpan = new ForegroundColorSpan(0xff111111);

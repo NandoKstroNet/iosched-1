@@ -18,7 +18,7 @@ package com.funkyandroid.droidcon.uk.iosched;
 
 public class Config {
     // Log tag
-    public static final String LOG_TAG = "DCUK2013";
+    public static final String LOG_TAG = "DFUK2013";
 
     // General configuration
     public static final int CONFERENCE_YEAR = 2013;
