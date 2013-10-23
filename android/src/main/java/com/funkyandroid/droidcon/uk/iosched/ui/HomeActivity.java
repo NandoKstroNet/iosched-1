@@ -98,9 +98,9 @@ public class HomeActivity extends BaseActivity implements
             actionBar.addTab(actionBar.newTab()
                     .setText(R.string.title_explore)
                     .setTabListener(this));
-            actionBar.addTab(actionBar.newTab()
-                    .setText(R.string.title_stream)
-                    .setTabListener(this));
+//            actionBar.addTab(actionBar.newTab()
+//                    .setText(R.string.title_stream)
+//                    .setTabListener(this));
             setHasTabs();
 
             if (getIntent() != null
@@ -285,7 +285,7 @@ public class HomeActivity extends BaseActivity implements
 
         @Override
         public int getCount() {
-            return 3;
+            return 2;
         }
     }
 

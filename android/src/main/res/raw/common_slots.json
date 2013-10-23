@@ -1,17 +1,6 @@
 {
   "day": [
     {
-      "date": "2013-10-26",
-      "slot": [
-        {
-          "start": "09:00",
-          "end": "19:00",
-          "title": "Android Hackathon",
-          "meta": "Ciklum office"
-        }
-      ]
-    },
-    {
       "date": "2013-10-27",
       "slot": [
         {

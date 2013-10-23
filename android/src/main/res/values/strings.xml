@@ -155,7 +155,8 @@
     <string name="about_body"><![CDATA[
         <b>GDG DevFest Ukraine 2013</b><br>
         Version %s<br/>
-        (Based on iosched 2013)
+        (Based on iosched 2013)<br/>
+        Adopted for GDG DevFest Ukraine by <a href="https://plus.google.com/102963345585524280596/about">+Vitalik Zasadnyy</a>
     ]]></string>
 
     <!--suppress AndroidLintTypographyOther -->
