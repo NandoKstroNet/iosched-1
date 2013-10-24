@@ -112,7 +112,7 @@ public class HomeActivity extends BaseActivity implements
             homeScreenLabel = getString(R.string.title_my_schedule);
 
         } else {
-            mSocialStreamFragment = (SocialStreamFragment) fm.findFragmentById(R.id.fragment_stream);
+//            mSocialStreamFragment = (SocialStreamFragment) fm.findFragmentById(R.id.fragment_stream);
 
             homeScreenLabel = "Home";
         }
@@ -325,9 +325,9 @@ public class HomeActivity extends BaseActivity implements
                 HelpUtils.showAbout(this);
                 return true;
 
-            case R.id.menu_wifi:
-                WiFiUtils.showWiFiDialog(this);
-                return true;
+//            case R.id.menu_wifi:
+//                WiFiUtils.showWiFiDialog(this);
+//                return true;
 
             case R.id.menu_settings:
                 startActivity(new Intent(this, SettingsActivity.class));

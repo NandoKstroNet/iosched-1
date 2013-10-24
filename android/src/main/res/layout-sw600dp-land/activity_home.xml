@@ -25,7 +25,7 @@
     <LinearLayout android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_weight="2">
 
         <TextView style="@style/HomePaneHeader"
             android:layout_width="match_parent"
@@ -45,13 +45,6 @@
                 android:layout_height="match_parent"
                 tools:layout="@layout/fragment_list_with_empty_container"/>
         </FrameLayout>
-
-        <fragment android:name="ua.org.gdg.devfest.iosched.ui.WhatsOnFragment"
-            android:id="@+id/fragment_whats_on"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/whats_on_height"
-            android:layout_margin="@dimen/multipane_half_padding"
-            tools:layout="@layout/fragment_whats_on"/>
     </LinearLayout>
 
     <LinearLayout android:orientation="vertical"
@@ -77,31 +70,13 @@
                 android:layout_height="match_parent"
                 tools:layout="@layout/fragment_list_with_empty_container_inset"/>
         </FrameLayout>
+
+        <fragment android:name="ua.org.gdg.devfest.iosched.ui.WhatsOnFragment"
+                  android:id="@+id/fragment_whats_on"
+                  android:layout_width="match_parent"
+                  android:layout_height="@dimen/whats_on_height"
+                  android:layout_margin="@dimen/multipane_half_padding"
+                  tools:layout="@layout/fragment_whats_on"/>
     </LinearLayout>
 
-    <LinearLayout android:orientation="vertical"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-
-        <TextView style="@style/HomePaneHeader"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/multipane_half_padding"
-            android:layout_marginTop="@dimen/multipane_half_padding"
-            android:text="@string/title_stream" />
-
-        <FrameLayout android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/multipane_half_padding"
-            android:background="@drawable/grey_frame">
-            <fragment android:name="ua.org.gdg.devfest.iosched.ui.SocialStreamFragment"
-                android:id="@+id/fragment_stream"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:layout="@layout/fragment_list_with_empty_container"/>
-        </FrameLayout>
-
-    </LinearLayout>
 </LinearLayout>

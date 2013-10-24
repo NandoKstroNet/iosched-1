@@ -95,7 +95,7 @@
     <string name="search_label">GDG DevFest Ukraine Sessions</string>
     <string name="search_hint">Search sessions</string>
 
-    <string name="share_template">Checking out \'<xliff:g id="title">%1$s</xliff:g>\' at <xliff:g id="hashtags">%2$s</xliff:g>  <xliff:g id="url">%3$s</xliff:g></string>
+    <string name="share_template">Checking out \'<xliff:g id="title">%1$s</xliff:g>\' at <xliff:g id="hashtags">%2$s</xliff:g>, <xliff:g id="url">%3$s</xliff:g></string>
 
     <string name="add_to_schedule">Add to schedule</string>
     <string name="remove_from_schedule">In schedule</string>
@@ -155,8 +155,9 @@
     <string name="about_body"><![CDATA[
         <b>GDG DevFest Ukraine 2013</b><br>
         Version %s<br/>
-        (Based on iosched 2013)<br/>
-        Adopted for GDG DevFest Ukraine by <a href="https://plus.google.com/102963345585524280596/about">+Vitalik Zasadnyy</a>
+        (Based on iosched 2013)<br/><br/>
+        Adopted for GDG DevFest Ukraine by <a href="https://plus.google.com/102963345585524280596/about">+Vitalik Zasadnyy</a><br/>
+        Icons Design by <a href="https://plus.google.com/102989169039151799851/about">+Oleh Zasadnyy</a>
     ]]></string>
 
     <!--suppress AndroidLintTypographyOther -->

@@ -431,12 +431,12 @@ public class SessionsFragment extends ListFragment implements
             Cursor cursor = (Cursor) mAdapter.getItem(position);
             boolean starred = cursor.getInt(SessionsQuery.STARRED) != 0;
             String hashtags = cursor.getString(SessionsQuery.HASHTAGS);
-            mSocialStreamMenuItem.setVisible(!TextUtils.isEmpty(hashtags));
+//            mSocialStreamMenuItem.setVisible(!TextUtils.isEmpty(hashtags));
             setSelectedSessionStarred(starred);
         } else {
             //mMapMenuItem.setVisible(false);
             mShareMenuItem.setVisible(false);
-            mSocialStreamMenuItem.setVisible(false);
+//            mSocialStreamMenuItem.setVisible(false);
             boolean allStarred = true;
             boolean allUnstarred = true;
             for (int pos : checkedSessionPositions) {
