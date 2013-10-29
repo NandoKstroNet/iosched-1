@@ -31,7 +31,7 @@ public class Config {
     public static final String CONFERENCE_IMAGE_PREFIX_URL = "http://uk.droidcon.com/2013/wp-content/uploads/";
 
     // Conference public WiFi AP parameters
-    public static final String WIFI_SSID = "DroidconUK";        // TODO: set real Droidcon WiFi SSID
+    public static final String WIFI_SSID = "Conference_hall";        // TODO: set real Droidcon WiFi SSID
     public static final String WIFI_PASSPHRASE = "Confzal3";    // TODO: set real Droidcon WiFi password
 
     // GCM config

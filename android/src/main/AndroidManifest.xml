@@ -18,8 +18,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="ua.org.gdg.devfest.iosched"
-    android:versionCode="201307"
-    android:versionName="2013.07"
+    android:versionCode="2"
+    android:versionName="1.0.1"
     android:installLocation="auto">
 
     <uses-sdk
