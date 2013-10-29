@@ -23,11 +23,11 @@
         iosched:actionViewClass="android.widget.SearchView"
         iosched:showAsAction="ifRoom|collapseActionView" />
 
-    <item android:id="@+id/menu_refresh"
-        android:icon="@drawable/ic_action_refresh"
-        android:title="@string/description_refresh"
-        android:orderInCategory="1"
-        iosched:showAsAction="ifRoom" />
+    <!--<item android:id="@+id/menu_refresh"-->
+        <!--android:icon="@drawable/ic_action_refresh"-->
+        <!--android:title="@string/description_refresh"-->
+        <!--android:orderInCategory="1"-->
+        <!--iosched:showAsAction="ifRoom" />-->
 
     <item android:id="@+id/menu_settings"
         android:title="@string/description_settings"

@@ -16,7 +16,7 @@
 <resources>
     <!-- Replace placeholder GA tracking Id with a real one. -->
     <!-- TODO: Add your Google Analytics tracking ID here. -->
-    <string name="ga_trackingId">UA-YOUR_TRACKING_ID_HERE</string>
+    <string name="ga_trackingId">UA-43643469-2</string>
     <bool name="ga_debug">false</bool>
     <bool name="ga_reportUncaughtExceptions">true</bool>
     <integer name="ga_sessionTimeout">120</integer>

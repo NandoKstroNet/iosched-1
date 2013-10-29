@@ -15,9 +15,9 @@
   -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:iosched="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/menu_social_stream"
-        android:icon="@drawable/ic_action_social_stream"
-        android:title="@string/description_social_stream"
-        android:orderInCategory="1"
-        iosched:showAsAction="ifRoom" />
+    <!--<item android:id="@+id/menu_social_stream"-->
+        <!--android:icon="@drawable/ic_action_social_stream"-->
+        <!--android:title="@string/description_social_stream"-->
+        <!--android:orderInCategory="1"-->
+        <!--iosched:showAsAction="ifRoom" />-->
 </menu>

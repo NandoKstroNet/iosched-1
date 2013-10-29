@@ -1,48 +1,43 @@
 {
   "day": [
     {
-      "date": "2013-10-24",
-      "slot": [
-        {
-          "start": "08:30",
-          "end": "09:30",
-          "title": "Welcome to Droidcon",
-          "meta": "Level 1"
-        },
-        {
-            "start": "11:15",
-            "end": "12:45",
-            "title": "Barcamp",
-            "meta": "Level 1"
-        },
-        {
-            "start": "14:00",
-            "end": "17:00",
-            "title": "Barcamp",
-            "meta": "Level 1"
-        },
-        {
-            "start": "17:00",
-            "end": "18:00",
-            "title": "Democamp",
-            "meta": "Level 1"
-        },
-        {
-            "start": "18:00",
-            "end": "21:00",
-            "title": "Party!",
-            "meta": "Level 1"
-        }
-      ]
-    },
-    {
-      "date": "2013-10-25",
+      "date": "2013-10-27",
       "slot": [
         {
           "start": "09:00",
-          "end": "09:40",
-          "title": "Welcome to Day Two!",
-          "meta": "Level 1"
+          "end": "09:30",
+          "title": "Registration. Welcome Coffee.",
+          "meta": "Hall"
+        },
+        {
+          "start": "09:30",
+          "end": "10:30",
+          "title": "Keynote",
+          "meta": "Main stage"
+        },
+        {
+          "start": "11:30",
+          "end": "12:00",
+          "title": "Coffee Break / Gadget Time",
+          "meta": "Hall"
+        },
+        {
+          "start": "13:50",
+          "end": "14:30",
+          "title": "Launch",
+          "meta": "Hall"
+        },
+        {
+          "start": "16:20",
+          "end": "16:50",
+          "title": "Coffee Break / Gadget Time",
+          "meta": "Hall"
+        },
+        {
+          "start": "17:50",
+          "end": "18:30",
+          "title": "GDG Ukraine Awards. DevFest closing.",
+          "meta": "Main stage"
         }
       ]
     }

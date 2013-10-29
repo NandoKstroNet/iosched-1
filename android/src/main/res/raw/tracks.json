@@ -1,1 +1,78 @@
-{"tracks":[{"colour":"#000000","id":"22","sessions":["109","115","121","113","123","106","119","111","117"],"title":"Barcamp","level":"1","description":"Your conference, by you, for you.","meta":1},{"colour":"#8fb655","id":"20","sessions":["37","78","35","24","87","33","70"],"title":"Design","level":"1","description":"Making your application look good.","meta":1},{"colour":"#45699e","id":"19","sessions":["101","80","127","56","89","60","72","64","52"],"title":"Dev Tools and Best Practices","level":"1","description":"Tips about development tools and development best practices","meta":1},{"colour":"#d35400","id":"18","sessions":["74","55","95","66","83","58","91","62"],"title":"Enterprise","level":"1","description":"Enterprise related development","meta":1},{"colour":"#fe4a9e","id":"14","sessions":["31","17","28","26","29","99"],"title":"Games","level":"1","description":"Gaming for Android","meta":1},{"colour":"#336699","id":"157","sessions":["158","161"],"title":"Hackathon","level":"1","description":"The Droidcon UK 2013 Hackathon","meta":1},{"colour":"#cecece","id":"21","sessions":["50","48","76","125","85","68","49"],"title":"Not Phones","level":"1","description":"Android on things other than 'phones.","meta":1}]}
+{
+   "tracks":[
+      {
+         "colour":"#99cc00",
+         "id":"140",
+         "sessions":[
+            "309",
+            "311",
+            "304",
+            "201",
+            "301",
+            "316"
+         ],
+         "title":"Android",
+         "level":"1",
+         "description":"Development and Monetization",
+         "meta":1
+      },
+      {
+         "colour":"#ff8800",
+         "id":"142",
+         "sessions":[
+            "297",
+            "292",
+            "291",
+            "296",
+            "199",
+            "308",
+            "307"
+         ],
+         "title":"GDG[x]",
+         "level":"1",
+         "description":"Google Glass, Education, other interesting projects",
+         "meta":1
+      },
+      {
+         "colour":"#47b7e6",
+         "id":"204",
+         "sessions":[
+            "303",
+            "299",
+            "300"
+         ],
+         "title":"Glass",
+         "level":"1",
+         "description":"Google Glass Development and Experience",
+         "meta":1
+      },
+      {
+         "colour":"#cc0000",
+         "id":"293",
+         "sessions":[
+            "298",
+            "294"
+         ],
+         "title":"Google Ads",
+         "level":"1",
+         "description":"AdWords, Analytics",
+         "meta":1
+      },
+      {
+         "colour":"#3366cc",
+         "id":"141",
+         "sessions":[
+            "314",
+            "194",
+            "295",
+            "290",
+            "305",
+            "302"
+         ],
+         "title":"Web",
+         "level":"1",
+         "description":"Google Analytics, AngularJS, WebComponents",
+         "meta":1
+      }
+   ]
+}
